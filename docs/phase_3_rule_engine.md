@@ -109,8 +109,11 @@ if __name__ == "__main__":
     )
 ```
 
-Example row of `customer_risk_predictions.csv`:
+![Rule Engine Predictions](../images/7_output-rule_engine.png)
 
+*The screenshot above demonstrates the Rule Engine in action, processing the features and assigning a deterministic `risk_category` to each customer based on the predefined business logic.*
+
+Example row of `customer_risk_predictions.csv`:
 | **customer_id** | **contract_type** | **monthly_charges** | **tenure** | **Churn** | **tickets_last_7_days** | **tickets_last_30_days** | **tickets_last_90_days** | **complaint_ticket** | **negative_ratio** | **risk_category** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7590-VHVEG | Month-to-month | 29.85 | 1 | No | 0.0 | 1.0 | 3.0 | 0.0 | 0.0 | LOW |
