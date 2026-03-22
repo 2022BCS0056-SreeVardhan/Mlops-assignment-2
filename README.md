@@ -18,8 +18,8 @@ This repository contains a complete DevOps lifecycle implementation for a determ
 
 ## Documentation
 Comprehensive phase-by-phase documentation of the system's development can be found in the `docs/` directory:
-- [Roadmap & Architecture](docs/roadmap.md)
-- [Phases Summary](docs/phases.md)
+- [Architecture](docs/architecture.md)
+- [Roadmap Summary](docs/roadmap.md)
 - [Phase 1: Data Preparation](docs/phase_1_data_prep.md)
 - [Phase 2: Feature Aggregation](docs/phase_2_feature_aggregation.md)
 - [Phase 3: Rule Engine Implementation](docs/phase_3_rule_engine.md)
