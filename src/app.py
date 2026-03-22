@@ -77,7 +77,12 @@ class CustomerRequest(BaseModel):
 # -----------------------------
 # Health check endpoint
 # -----------------------------
-@app.get("/")
+@app.get(
+    "/",
+    summary="Health Check",
+    description="Returns service status to verify that the churn risk service is running.",
+    response_description="Service status message",
+)
 def health_check():
 
     REQUEST_COUNT.labels(method="GET", endpoint="/").inc()
@@ -154,7 +159,17 @@ def compute_features(customer_id):
 # -----------------------------
 # Prediction endpoint
 # -----------------------------
-@app.post("/predict-risk")
+@app.post(
+    "/predict-risk",
+    summary="Predict Churn Risk",
+    description="Computes churn risk category for a customer using contract type and support ticket history.",
+    response_description="Predicted churn risk category",
+    responses={
+        200: {"description": "Prediction successful"},
+        404: {"description": "Customer not found"},
+        422: {"description": "Invalid request payload"},
+    },
+)
 def predict_risk(request: CustomerRequest):
 
     start_time = time.time()
